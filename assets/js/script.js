@@ -2,7 +2,6 @@
 let price;
 const pricePerKm = 0.21;
 let finalPrice;
-let discount = false;
 
 document.getElementById("submit").addEventListener("click", function () {
   const userName = document.getElementById("name").value;
@@ -19,10 +18,8 @@ document.getElementById("submit").addEventListener("click", function () {
   // Applying Discounts
   if (age == "senior") {
     price = price - price * 0.4;
-    discount = true;
   } else if (age == "minor") {
     price = price - price * 0.2;
-    discount = true;
   }
 
   finalPrice = price.toFixed(2) + "€";
@@ -31,10 +28,10 @@ document.getElementById("submit").addEventListener("click", function () {
   document.getElementById("customer-name").innerHTML = userName;
 
   // Ticket Type
-  if (discount == false) {
-    document.getElementById("ticket-type").innerHTML = "Standard Ticket";
-  } else {
+  if (age == "senior" || age == "minor") {
     document.getElementById("ticket-type").innerHTML = "Discounted Ticket";
+  } else if (age == "adult") {
+    document.getElementById("ticket-type").innerHTML = "Standard Ticket";
   }
 
   //Carriage Number
