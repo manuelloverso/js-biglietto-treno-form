@@ -30,11 +30,21 @@ document.getElementById("submit").addEventListener("click", function () {
   //Output Displaying
   document.getElementById("customer-name").innerHTML = userName;
 
+  // Ticket Type
   if (discount == false) {
     document.getElementById("ticket-type").innerHTML = "Standard Ticket";
   } else {
     document.getElementById("ticket-type").innerHTML = "Discounted Ticket";
   }
 
+  //Carriage Number
+  let carriage = Math.floor(Math.random() * 20);
+  document.getElementById("carriage-number").innerHTML = carriage;
+
+  //Ticket Code
+  let ticketCode = Math.floor(Math.random() * 50000);
+  document.getElementById("ticket-code").innerHTML = ticketCode;
+
+  //Ticket Price
   document.getElementById("final-price").innerHTML = finalPrice;
 });
