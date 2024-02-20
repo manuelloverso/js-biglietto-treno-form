@@ -8,6 +8,8 @@ document.getElementById("submit").addEventListener("click", function () {
   const km = document.getElementById("km").value;
   let age = document.getElementById("age").value;
 
+  document.getElementById("generated-ticket").className = "ticket";
+
   console.log(userName);
   console.log(km);
   console.log(age);

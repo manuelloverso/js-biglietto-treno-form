@@ -9,6 +9,10 @@ body {
 }
 
 /* #region LAYOUT UTILITIES */
+.d-none {
+  display: none !important;
+}
+
 .col-12 {
   width: 100%;
 }
