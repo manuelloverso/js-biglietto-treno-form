@@ -4,37 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Form Biglietto treno</title>
   </head>
   <body>
-    <!-- Input Name -->
-    <label for="name">Enter your name</label>
-    <input type="text" id="name" placeholder="Name Surname" />
+    <main>
+      <div class="container">
+        <div class="col-12 heading">
+          <h1>We're happy to have you here</h1>
+          <h3>Enter your data below</h3>
+        </div>
 
-    <!-- Input KM -->
-    <label for="km">Km to travel</label>
-    <input id="km" type="number" />
+        <!-- Form -->
+        <div class="form">
+          <!-- Input Name -->
+          <div class="col-4">
+            <div class="input-user-name">
+              <label for="name">Enter your name</label>
+              <input type="text" id="name" placeholder="Name Surname" />
+            </div>
+          </div>
 
-    <!-- Input Age -->
-    <label for="age">Select your age</label>
-    <select name="age" id="age">
-      <option value="adult">Adult</option>
-      <option value="minor">Under 18</option>
-      <option value="senior">Over 65</option>
-    </select>
+          <!-- Input KM -->
+          <div class="col-4">
+            <div class="input-km">
+              <label for="km">Km to travel</label>
+              <input id="km" type="number" />
+            </div>
+          </div>
 
-    <!-- Submit Button -->
-    <button id="submit" type="submit">Calculate</button>
+          <!-- Input Age -->
+          <div class="col-4">
+            <div class="input-age">
+              <label for="age">Select your age</label>
+              <select name="age" id="age">
+                <option value="adult">Adult</option>
+                <option value="minor">Under 18</option>
+                <option value="senior">Over 65</option>
+              </select>
+            </div>
+          </div>
 
-    <!-- Generated Ticket -->
-    <div class="ticket">
-      <h1>Your Ticket</h1>
-      <div id="user-name"></div>
+          <!-- Submit Button -->
+          <div class="col-12">
+            <div class="submit-btn">
+              <button id="submit" type="submit">Calculate</button>
+            </div>
+          </div>
+        </div>
 
-      <div id="ticket-type"></div>
+        <!-- Generated Ticket -->
+        <h1 class="your-ticket">Your Ticket</h1>
 
-      <div id="final-price"></div>
-    </div>
+        <div class="ticket">
+          <div class="user-name col-4">
+            <h2>Customer Name:</h3>
+            <h3 id="customer-name">None</h3>
+          </div>
+
+          <div class="ticket-details col-8">
+            <div class="discount-ticket col-3">
+                <h3>Ticket Type</h3>
+              <h4 id="ticket-type">Standard Ticket</h4>
+            </div>
+
+            <div class="carriage col-3">
+                <h3>Carriage N.</h3>
+                <h4 id="carriage-number">00</h4>
+            </div>
+
+            <div class="code col-3">
+                <h3>Ticket Code</h3>
+                <h4 id="ticket-code">00000</h4>
+            </div>
+
+            <div class="price col-3">
+                <h3>Ticket Price:</h3>
+                <h4 id="final-price">0.00€</h4>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!-- JS Link -->
     <script src="./assets/js/script.js"></script>

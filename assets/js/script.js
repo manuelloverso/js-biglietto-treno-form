@@ -28,7 +28,7 @@ document.getElementById("submit").addEventListener("click", function () {
   finalPrice = price.toFixed(2) + "€";
 
   //Output Displaying
-  document.getElementById("user-name").innerHTML = userName;
+  document.getElementById("customer-name").innerHTML = userName;
 
   if (discount == false) {
     document.getElementById("ticket-type").innerHTML = "Standard Ticket";
