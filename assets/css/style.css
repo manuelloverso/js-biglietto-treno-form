@@ -57,7 +57,7 @@ main {
   }
 }
 
-.form {
+form {
   display: flex;
   flex-wrap: wrap;
   background-color: #f1f3f5;
@@ -75,15 +75,18 @@ main {
     margin-right: 10px;
   }
 
-  #submit {
+  #submit,
+  #reset {
     font-size: 1rem;
     padding: 7px;
     border: none;
     background-color: #e03131;
     color: white;
+    margin-right: 10px;
   }
 
-  #submit:hover {
+  #submit:hover,
+  #reset:hover {
     background-color: #c50404;
   }
 

@@ -3,7 +3,8 @@ let price;
 const pricePerKm = 0.21;
 let finalPrice;
 
-document.getElementById("submit").addEventListener("click", function () {
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
   const userName = document.getElementById("name").value;
   const km = document.getElementById("km").value;
   let age = document.getElementById("age").value;
